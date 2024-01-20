@@ -34,6 +34,7 @@ pub struct TritonClient {
 
 /// Common methods for a derived data producing model to implement
 /// TODO: Add more useful methods and factor more of the SimpleModel implementation into generics
+#[derive(Clone, Debug)]
 pub trait TritonModel {
     /// Build an inference request that can be submitted to a model from
     fn build_inference_request(&self, raw_inputs: Vec<Vec<u8>>) -> ModelInferRequest;
