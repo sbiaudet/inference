@@ -27,7 +27,7 @@ use tonic::Status;
 use tracing::{event, instrument, Level};
 
 /// A gRPC client for the Triton inference server
-#[derive(Clone, Debug)]
+#[derive(Clone)]
 pub struct TritonClient {
     client: GrpcInferenceServiceClient<Channel>,
     addr: String,
