@@ -1,5 +1,5 @@
 fn main() {
-    std::env::set_var("PROTOC", "/usr/bin/protoc");
+    // std::env::set_var("PROTOC", "/usr/bin/protoc");
     tonic_build::configure()
         .build_server(false)
         .out_dir("src") // you can change the generated code's location
